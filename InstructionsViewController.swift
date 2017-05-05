@@ -9,11 +9,11 @@
 import UIKit
 
 class InstructionsViewController: UIViewController {
+    
+    var source: String = "Main"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +32,8 @@ class InstructionsViewController: UIViewController {
     }
     */
 
+    @IBAction func back() {
+        performSegue(withIdentifier: "unwindTo"+self.source, sender: self)
+    }
+    
 }
