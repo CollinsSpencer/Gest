@@ -375,22 +375,22 @@ class GameViewController: UIViewController {
         }
         
         if (gestures[currentGestureIndex].quadrant != currentQuadrant) {
-            incorrect()
+            incorrect(currentQuadrant)
         } else if (gestures[currentGestureIndex].numberOfTouches != numberOfTouches) {
-            incorrect()
+            incorrect(currentQuadrant)
         } else {
         
             if (gestures[currentGestureIndex].gestureId == gestureId) {
                 print(gestureId)
-                correct()
+                correct(currentQuadrant)
             } else {
-                incorrect()
+                incorrect(currentQuadrant)
             }
             
         }
     }
     
-    private func correct() {
+    private func correct(_ quadrant: Int) {
         print("Correct")
         
         if (goingBack) {
@@ -402,43 +402,45 @@ class GameViewController: UIViewController {
                 progressBar.goingBack = true
             }
         }
+        let note: Int = 60 + quadrant
         if (goingBack && progressBar.progress == 0) {
             performSegue(withIdentifier: "GameWon", sender: self)
-            playNote(60, length: 0.15)
+            playNote(note, length: 0.15)
             runCode(in: 0.15) {
-                self.playNote(60, length: 0.15)
+                self.playNote(note, length: 0.15)
             }
             runCode(in: 0.3) {
-                self.playNote(60, length: 0.15)
+                self.playNote(note, length: 0.15)
             }
             runCode(in: 0.45) {
-                self.playNote(65, length: 0.3)
+                self.playNote(note+5, length: 0.3)
             }
         } else {
-            playNote(60, length: 0.1)
+            playNote(note, length: 0.1)
             runCode(in: 0.1) {
-                self.playNote(65, length: 0.3)
+                self.playNote(note+5, length: 0.3)
             }
         }
     }
     
-    private func incorrect() {
+    private func incorrect(_ quadrant: Int) {
         let lost:Bool = pointFromScore()
         print("Incorrect")
+        let note: Int = 60 + quadrant
         if (lost) {
-            playNote(65, length: 0.3)
+            playNote(note+5, length: 0.3)
             runCode(in: 0.3) {
-                self.playNote(64, length: 0.3)
+                self.playNote(note+4, length: 0.3)
             }
             runCode(in: 0.6) {
-                self.playNote(63, length: 0.3)
+                self.playNote(note+3, length: 0.3)
             }
             runCode(in: 0.9) {
-                self.playNote(62, length: 0.5)
+                self.playNote(note+2, length: 0.5)
             }
         } else {
-            playNote(65, length: 0.3)
-            playNote(64, length: 0.3)
+            playNote(note+5, length: 0.3)
+            playNote(note+4, length: 0.3)
         }
     }
     

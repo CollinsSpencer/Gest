@@ -540,7 +540,7 @@
                         <viewControllerLayoutGuide type="bottom" id="SK7-Fb-izm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kVR-ft-dgd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w94-ux-UX9">
@@ -568,7 +568,7 @@
                                 </connections>
                             </button>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="250" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gi-dP-xjg">
-                                <rect key="frame" x="16" y="92" width="382" height="636"/>
+                                <rect key="frame" x="16" y="92" width="382" height="900"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vu8-E5-IaV">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="1000"/>
@@ -580,37 +580,44 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, I'm Spencer Collins, the designer and developer." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jaf-j3-qx2">
-                                                <rect key="frame" x="0.0" y="262.66666666666669" width="382" height="40.666666666666629"/>
+                                                <rect key="frame" x="0.0" y="262.66666666666669" width="382" height="60.666666666666629"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wR4-xb-7Na">
-                                                <rect key="frame" x="0.0" y="311.33333333333331" width="382" height="82"/>
+                                                <rect key="frame" x="0.0" y="331.33333333333337" width="382" height="122.00000000000006"/>
                                                 <string key="text">I am a Software Engineering student at the University of Nebraska-Lincoln involved in the Jefferey S. Raikes School of Computer Science and Management, the Cornhusker Marching Band, the Big Red Express, and CSE Ambassadors.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfA-kr-HHd">
-                                                <rect key="frame" x="0.0" y="401.33333333333326" width="382" height="81.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="461.33333333333343" width="382" height="121.66666666666657"/>
                                                 <string key="text">I have been experience coding in many languages, including Java, python, PHP, javascript, HTML, and CSS. This is what sparked my curiousity to learn more about Swift and the unique possibilities it creates for development.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mz8-XM-vHp">
-                                                <rect key="frame" x="0.0" y="491" width="382" height="82"/>
+                                                <rect key="frame" x="0.0" y="591" width="382" height="122"/>
                                                 <string key="text">Having played trumpet and some piano since elementary school, I have also made an effort to exposed myself to unique ways of sharing and expressing music, such as marching in a drum and bugle corps in the summer of 2015. That passion for music is the source of my desire to minor in Music Technology.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit: All graphics were created by Spencer Collins other than the settings icon, which is free through Icons8." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m0-H2-kWi">
+                                                <rect key="frame" x="0.0" y="721" width="382" height="122"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvd-Dg-jSw">
-                                                <rect key="frame" x="0.0" y="581" width="382" height="419"/>
+                                                <rect key="frame" x="0.0" y="851" width="382" height="149"/>
                                             </view>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="4m0-H2-kWi" firstAttribute="height" secondItem="wR4-xb-7Na" secondAttribute="height" id="50C-sU-Txa"/>
                                             <constraint firstItem="wR4-xb-7Na" firstAttribute="height" secondItem="Jaf-j3-qx2" secondAttribute="height" multiplier="2" id="Cua-Zt-NfN"/>
                                             <constraint firstItem="Mz8-XM-vHp" firstAttribute="height" secondItem="wR4-xb-7Na" secondAttribute="height" id="MfC-81-jVO"/>
                                             <constraint firstAttribute="height" constant="1000" id="WrJ-sX-V5y"/>
@@ -640,6 +647,8 @@
                             <constraint firstItem="Vu8-E5-IaV" firstAttribute="width" secondItem="kVR-ft-dgd" secondAttribute="width" constant="-32" id="t5V-4Q-LzM"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Elc-KC-huW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NSS-1i-3YW" userLabel="Exit" sceneMemberID="exit"/>
