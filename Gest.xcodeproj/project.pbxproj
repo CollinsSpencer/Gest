@@ -22,6 +22,7 @@
 		09F67B101EBC4BB10097A34C /* GestureOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F67B0F1EBC4BB10097A34C /* GestureOption.swift */; };
 		09F67B121EBC70740097A34C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F67B111EBC70740097A34C /* SettingsViewController.swift */; };
 		09F67B141EBCD76A0097A34C /* MIDINote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F67B131EBCD76A0097A34C /* MIDINote.swift */; };
+		09F67B161EBCDBAF0097A34C /* gs_instruments.dls in Resources */ = {isa = PBXBuildFile; fileRef = 09F67B151EBCDB5B0097A34C /* gs_instruments.dls */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		09F67B0F1EBC4BB10097A34C /* GestureOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureOption.swift; sourceTree = "<group>"; };
 		09F67B111EBC70740097A34C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		09F67B131EBCD76A0097A34C /* MIDINote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDINote.swift; sourceTree = "<group>"; };
+		09F67B151EBCDB5B0097A34C /* gs_instruments.dls */ = {isa = PBXFileReference; lastKnownFileType = file; path = gs_instruments.dls; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,13 +76,13 @@
 		09F67AEC1EB3F9200097A34C /* Gest */ = {
 			isa = PBXGroup;
 			children = (
-				09F67B011EBA8C340097A34C /* InstructionsViewController.swift */,
 				09F67AED1EB3F9200097A34C /* AppDelegate.swift */,
-				09F67AEF1EB3F9200097A34C /* ViewController.swift */,
+				09F67AF61EB3F9200097A34C /* LaunchScreen.storyboard */,
 				09F67AF11EB3F9200097A34C /* Main.storyboard */,
 				09F67AF41EB3F9200097A34C /* Assets.xcassets */,
-				09F67AF61EB3F9200097A34C /* LaunchScreen.storyboard */,
+				09F67B151EBCDB5B0097A34C /* gs_instruments.dls */,
 				09F67AF91EB3F9200097A34C /* Info.plist */,
+				09F67AEF1EB3F9200097A34C /* ViewController.swift */,
 				09F67AFF1EBA8C210097A34C /* AboutMeViewController.swift */,
 				09F67B031EBA8C4E0097A34C /* GameViewController.swift */,
 				09F67B051EBA97080097A34C /* PausedViewController.swift */,
@@ -88,6 +90,7 @@
 				09F67B0B1EBC39510097A34C /* GameWonViewController.swift */,
 				09F67B0D1EBC395F0097A34C /* GameLostViewController.swift */,
 				09F67B0F1EBC4BB10097A34C /* GestureOption.swift */,
+				09F67B011EBA8C340097A34C /* InstructionsViewController.swift */,
 				09F67B111EBC70740097A34C /* SettingsViewController.swift */,
 				09F67B131EBCD76A0097A34C /* MIDINote.swift */,
 			);
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F67B161EBCDBAF0097A34C /* gs_instruments.dls in Resources */,
 				09F67AF81EB3F9200097A34C /* LaunchScreen.storyboard in Resources */,
 				09F67AF51EB3F9200097A34C /* Assets.xcassets in Resources */,
 				09F67AF31EB3F9200097A34C /* Main.storyboard in Resources */,

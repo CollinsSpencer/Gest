@@ -10,6 +10,8 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    //MARK: Properties
+    var midiNote: MIDINote = MIDINote()
     var gameCount = 3
     var goingBack:Bool = false
     var gestures = [GestureOption]()
@@ -33,6 +35,10 @@ class GameViewController: UIViewController {
         printGestureOptions()
         
         initializeGestureRecognizers()
+        
+        midiNote.setPatch(num: 0, drum: false)
+        // 0 is piano
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -386,6 +392,7 @@ class GameViewController: UIViewController {
     
     private func correct() {
         print("Correct")
+        
         if (goingBack) {
             progressBar.progress -= 1
         } else {
@@ -397,20 +404,72 @@ class GameViewController: UIViewController {
         }
         if (goingBack && progressBar.progress == 0) {
             performSegue(withIdentifier: "GameWon", sender: self)
+            playNote(60, length: 0.15)
+            runCode(in: 0.15) {
+                self.playNote(60, length: 0.15)
+            }
+            runCode(in: 0.3) {
+                self.playNote(60, length: 0.15)
+            }
+            runCode(in: 0.45) {
+                self.playNote(65, length: 0.3)
+            }
+        } else {
+            playNote(60, length: 0.1)
+            runCode(in: 0.1) {
+                self.playNote(65, length: 0.3)
+            }
         }
     }
     
     private func incorrect() {
-        pointFromScore()
+        let lost:Bool = pointFromScore()
         print("Incorrect")
+        if (lost) {
+            playNote(65, length: 0.3)
+            runCode(in: 0.3) {
+                self.playNote(64, length: 0.3)
+            }
+            runCode(in: 0.6) {
+                self.playNote(63, length: 0.3)
+            }
+            runCode(in: 0.9) {
+                self.playNote(62, length: 0.5)
+            }
+        } else {
+            playNote(65, length: 0.3)
+            playNote(64, length: 0.3)
+        }
     }
     
-    private func pointFromScore() {
+    private func pointFromScore() -> Bool {
         score -= 1
         scoreBoard.text = String(score)
         if (score == 0) {
             performSegue(withIdentifier: "GameLost", sender: self)
+            return true
         }
+        return false
+    }
+    
+    func startNote(_ note: Int) {
+        midiNote.sampler?.startNote(UInt8(note), withVelocity: 64, onChannel: 0)
+    }
+    
+    func stopNote(_ note: Int) {
+        midiNote.sampler?.stopNote(UInt8(note), onChannel: 0)
+    }
+    
+    private func playNote(_ note: Int, length: TimeInterval) {
+        startNote(note)
+        runCode(in:length) {
+            self.stopNote(note)
+        }
+//        let _: Timer = Timer(timeInterval: length, target: self, selector: #selector(stopNote(_:)), userInfo: nil, repeats: true)
+    }
+    
+    private func runCode(in timeInterval: TimeInterval, _ code:@escaping ()->(Void)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval, execute: code)
     }
     
 }
