@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var numberOfTouches: Int = 1
+    var option: Int = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,18 +36,24 @@ class ViewController: UIViewController {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             gameViewController.gameCount = 3
+            gameViewController.option = option
+            gameViewController.numberOfTouches = numberOfTouches
             
         case "Five":
             guard let gameViewController = segue.destination as? GameViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             gameViewController.gameCount = 5
+            gameViewController.option = option
+            gameViewController.numberOfTouches = numberOfTouches
             
         case "Seven":
             guard let gameViewController = segue.destination as? GameViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             gameViewController.gameCount = 7
+            gameViewController.option = option
+            gameViewController.numberOfTouches = numberOfTouches
         
         case "Instructions":
             guard let instructionsViewController = segue.destination as? InstructionsViewController else {
@@ -54,6 +63,20 @@ class ViewController: UIViewController {
             
         case "AboutMe":
             break
+            
+        case "Settings":
+            guard let settingsViewController = segue.destination as? SettingsViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            settingsViewController.modalPresentationStyle = UIModalPresentationStyle.popover
+            settingsViewController.preferredContentSize = CGSize(width: 350, height: 350)
+            
+            settingsViewController.popoverPresentationController?.sourceView = self.view
+            settingsViewController.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            settingsViewController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+            
+            settingsViewController.touchedIndex = numberOfTouches - 1
             
         default:
             fatalError("Unexpected Segue Identifier: \(segue.identifier ?? "")")
