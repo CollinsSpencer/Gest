@@ -21,6 +21,7 @@
 		09F67B0E1EBC395F0097A34C /* GameLostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F67B0D1EBC395F0097A34C /* GameLostViewController.swift */; };
 		09F67B101EBC4BB10097A34C /* GestureOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F67B0F1EBC4BB10097A34C /* GestureOption.swift */; };
 		09F67B121EBC70740097A34C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F67B111EBC70740097A34C /* SettingsViewController.swift */; };
+		09F67B141EBCD76A0097A34C /* MIDINote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F67B131EBCD76A0097A34C /* MIDINote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		09F67B0D1EBC395F0097A34C /* GameLostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLostViewController.swift; sourceTree = "<group>"; };
 		09F67B0F1EBC4BB10097A34C /* GestureOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureOption.swift; sourceTree = "<group>"; };
 		09F67B111EBC70740097A34C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		09F67B131EBCD76A0097A34C /* MIDINote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDINote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				09F67B0D1EBC395F0097A34C /* GameLostViewController.swift */,
 				09F67B0F1EBC4BB10097A34C /* GestureOption.swift */,
 				09F67B111EBC70740097A34C /* SettingsViewController.swift */,
+				09F67B131EBCD76A0097A34C /* MIDINote.swift */,
 			);
 			path = Gest;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				09F67B041EBA8C4E0097A34C /* GameViewController.swift in Sources */,
 				09F67AF01EB3F9200097A34C /* ViewController.swift in Sources */,
+				09F67B141EBCD76A0097A34C /* MIDINote.swift in Sources */,
 				09F67B121EBC70740097A34C /* SettingsViewController.swift in Sources */,
 				09F67B101EBC4BB10097A34C /* GestureOption.swift in Sources */,
 				09F67B061EBA97080097A34C /* PausedViewController.swift in Sources */,

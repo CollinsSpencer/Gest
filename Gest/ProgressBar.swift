@@ -13,8 +13,8 @@ import UIKit
     // MARK: Properties
     private var progressBars = [UIView]()
     var goingBack: Bool = false
-    let scoredColor: UIColor = UIColor.red
-    let scoredGoingBackColor: UIColor = UIColor.cyan
+    let scoredColor: UIColor = UIColor(red: 84/255, green: 215/255, blue: 155/255, alpha: 1)
+    let scoredGoingBackColor: UIColor = UIColor(red: 158/255, green: 152/255, blue: 241/255, alpha: 1)
     let emptyColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
     
     

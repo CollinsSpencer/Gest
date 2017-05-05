@@ -22,6 +22,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        score = numberOfTouches * (option + 1) * 4
+        
         scoreBoard.text = String(score)
         
         setupProgressBar()
@@ -132,7 +134,7 @@ class GameViewController: UIViewController {
     
     private func initializeGestureOptions() {
         for _ in 0..<gameCount {
-            gestures += [GestureOption(maxNumberOfTouches: numberOfTouches)]
+            gestures += [GestureOption(maxNumberOfTouches: numberOfTouches, option: option)]
         }
     }
     
@@ -145,7 +147,7 @@ class GameViewController: UIViewController {
     
     private func initializeGestureRecognizers() {
         //0
-        if (option >= 0) {
+        if (option == 0) {
             let singleTapOneTouch = UITapGestureRecognizer(target: self, action: #selector(singleTap(_:)))
             singleTapOneTouch.numberOfTouchesRequired = 1
             singleTapOneTouch.numberOfTapsRequired = 1
@@ -157,6 +159,12 @@ class GameViewController: UIViewController {
             let doubleTapOneTouch = UITapGestureRecognizer(target: self, action: #selector(doubleTap(_:)))
             doubleTapOneTouch.numberOfTouchesRequired = 1
             doubleTapOneTouch.numberOfTapsRequired = 2
+            
+            let singleTapOneTouch = UITapGestureRecognizer(target: self, action: #selector(singleTap(_:)))
+            singleTapOneTouch.numberOfTouchesRequired = 1
+            singleTapOneTouch.numberOfTapsRequired = 1
+            singleTapOneTouch.require(toFail: doubleTapOneTouch)
+            self.view.addGestureRecognizer(singleTapOneTouch)
             self.view.addGestureRecognizer(doubleTapOneTouch)
         }
         
@@ -219,7 +227,7 @@ class GameViewController: UIViewController {
     
     private func initializeGestureRecognizersWithTwoTouch() {
         //0
-        if (option >= 0) {
+        if (option == 0) {
             let singleTapTwoTouch = UITapGestureRecognizer(target: self, action: #selector(singleTap(_:)))
             singleTapTwoTouch.numberOfTouchesRequired = 2
             singleTapTwoTouch.numberOfTapsRequired = 1
@@ -231,6 +239,12 @@ class GameViewController: UIViewController {
             let doubleTapTwoTouch = UITapGestureRecognizer(target: self, action: #selector(doubleTap(_:)))
             doubleTapTwoTouch.numberOfTouchesRequired = 2
             doubleTapTwoTouch.numberOfTapsRequired = 2
+            
+            let singleTapTwoTouch = UITapGestureRecognizer(target: self, action: #selector(singleTap(_:)))
+            singleTapTwoTouch.numberOfTouchesRequired = 2
+            singleTapTwoTouch.numberOfTapsRequired = 1
+            singleTapTwoTouch.require(toFail: doubleTapTwoTouch)
+            self.view.addGestureRecognizer(singleTapTwoTouch)
             self.view.addGestureRecognizer(doubleTapTwoTouch)
         }
         
@@ -277,7 +291,7 @@ class GameViewController: UIViewController {
     
     private func initializeGestureRecognizersWithThreeTouch() {
         //0
-        if (option >= 0) {
+        if (option == 0) {
             let singleTapThreeTouch = UITapGestureRecognizer(target: self, action: #selector(singleTap(_:)))
             singleTapThreeTouch.numberOfTouchesRequired = 3
             singleTapThreeTouch.numberOfTapsRequired = 1
@@ -289,6 +303,12 @@ class GameViewController: UIViewController {
             let doubleTapThreeTouch = UITapGestureRecognizer(target: self, action: #selector(doubleTap(_:)))
             doubleTapThreeTouch.numberOfTouchesRequired = 3
             doubleTapThreeTouch.numberOfTapsRequired = 2
+            
+            let singleTapThreeTouch = UITapGestureRecognizer(target: self, action: #selector(singleTap(_:)))
+            singleTapThreeTouch.numberOfTouchesRequired = 3
+            singleTapThreeTouch.numberOfTapsRequired = 1
+            singleTapThreeTouch.require(toFail: doubleTapThreeTouch)
+            self.view.addGestureRecognizer(singleTapThreeTouch)
             self.view.addGestureRecognizer(doubleTapThreeTouch)
         }
         
@@ -354,30 +374,10 @@ class GameViewController: UIViewController {
             incorrect()
         } else {
         
-            switch gestureId {
-            case 0:
-                print(0)
+            if (gestures[currentGestureIndex].gestureId == gestureId) {
+                print(gestureId)
                 correct()
-            case 1:
-                print(1)
-                correct()
-            case 2:
-                print(2)
-                correct()
-            case 3:
-                print(3)
-                correct()
-            case 4:
-                print(4)
-                correct()
-            case 5:
-                print(5)
-                correct()
-            case 6:
-                print(6)
-                correct()
-                
-            default:
+            } else {
                 incorrect()
             }
             

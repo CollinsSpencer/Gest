@@ -16,9 +16,10 @@ class GestureOption: NSObject {
     var numberOfTouches: Int
     
     // MARK: Initialization
-    init(maxNumberOfTouches: Int) {
+    init(maxNumberOfTouches: Int, option: Int) {
         self.quadrant = Int(arc4random_uniform(4))
-        self.gestureId = Int(arc4random_uniform(7))
+        let optionsAvailable: Int = option + 1
+        self.gestureId = Int(arc4random_uniform(UInt32(optionsAvailable)))
         if (self.gestureId < 7) {
             self.numberOfTouches = Int(arc4random_uniform(UInt32(maxNumberOfTouches))) + 1
         } else {
