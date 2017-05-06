@@ -17,14 +17,14 @@ class GameViewController: UIViewController {
     var gestures = [GestureOption]()
     var score: Int = 10
     var numberOfTouches: Int = 1
-    var option: Int = 1
+    var option: Int = 0
     @IBOutlet weak var progressBar: ProgressBar!
     @IBOutlet weak var scoreBoard: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        score = numberOfTouches * (option + 1) * 4
+        score = numberOfTouches * (option + 1) * 4 * gameCount
         
         scoreBoard.text = String(score)
         

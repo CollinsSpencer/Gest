@@ -294,15 +294,18 @@
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4ci-KK-BgM" customClass="ProgressBar" customModule="Gest" customModuleProvider="target">
                                 <rect key="frame" x="8" y="716" width="398" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="2CN-wi-SxY"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6W-2m-MYf">
-                                <rect key="frame" x="346.66666666666674" y="20" width="51.333333333333314" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gestures remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6W-2m-MYf">
+                                <rect key="frame" x="224" y="20" width="174" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.66666666669999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDi-bv-PmY">
-                                <rect key="frame" x="332" y="44" width="81" height="56"/>
+                                <rect key="frame" x="270.66666666666669" y="44" width="81" height="56"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="48"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.66666666669999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -712,13 +715,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="1000" image="Gest Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ec4-1L-6PO">
-                                                <rect key="frame" x="0.0" y="246" width="382" height="254.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="246" width="382" height="250"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="ec4-1L-6PO" secondAttribute="height" multiplier="3:2" id="J55-Br-fkC"/>
+                                                    <constraint firstAttribute="height" constant="250" id="tKI-Gt-ucv"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xy7-eq-FYh">
-                                                <rect key="frame" x="0.0" y="508.66666666666657" width="382" height="241.33333333333343"/>
+                                                <rect key="frame" x="0.0" y="504" width="382" height="246"/>
                                             </view>
                                         </subviews>
                                         <constraints>

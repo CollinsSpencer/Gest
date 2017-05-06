@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var numberOfTouches: Int = 1
-    var option: Int = 1
+    var option: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
