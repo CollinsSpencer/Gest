@@ -10,6 +10,7 @@ import UIKit
 
 class InstructionsViewController: UIViewController {
     
+    // MARK: Properties
     var source: String = "Main"
 
     override func viewDidLoad() {
@@ -22,15 +23,7 @@ class InstructionsViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func back() {
         performSegue(withIdentifier: "unwindTo"+self.source, sender: self)

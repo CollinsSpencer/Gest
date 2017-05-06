@@ -10,6 +10,7 @@ import UIKit
 
 class GameWonViewController: UIViewController {
 
+    // MARK: Properties
     @IBOutlet weak var finalScoreBoard: UILabel!
     var finalScore: Int = 0
     

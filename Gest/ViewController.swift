@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: Properties
     var numberOfTouches: Int = 1
     var option: Int = 0
     

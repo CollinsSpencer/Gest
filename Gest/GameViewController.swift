@@ -10,7 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController {
 
-    //MARK: Properties
+    // MARK: Properties
     var midiNote: MIDINote = MIDINote()
     var gameCount = 3
     var goingBack:Bool = false
@@ -101,7 +101,7 @@ class GameViewController: UIViewController {
     }
     
     
-    // MARK: Gesture Recognizers
+    // MARK: - Gesture Recognizers
     
     func singleTap(_ sender: UITapGestureRecognizer) {
         gestureProcessor(gestureId: 0, point: sender.location(in: self.view), numberOfTouches: sender.numberOfTouches)
@@ -132,11 +132,14 @@ class GameViewController: UIViewController {
     }
     
     
-    // MARK: Private Methods
+    // MARK: - Private Methods
     
     private func setupProgressBar() {
         progressBar.barCount = gameCount
     }
+    
+    
+    // MARK: Initialize Gestures
     
     private func initializeGestureOptions() {
         for _ in 0..<gameCount {
@@ -150,6 +153,9 @@ class GameViewController: UIViewController {
             print(String(gestures[i].quadrant) + " " + String(gestures[i].gestureId) + " " + String(gestures[i].numberOfTouches))
         }
     }
+    
+    
+    // MARK: Initialize Gesture Recognizers
     
     private func initializeGestureRecognizers() {
         //0
@@ -215,14 +221,7 @@ class GameViewController: UIViewController {
             swipeDownOneTouch.direction = UISwipeGestureRecognizerDirection.down
             self.view.addGestureRecognizer(swipeDownOneTouch)
         }
-        //7
         
-        //8
-        
-        //9
-        
-        //10
-                
         if (numberOfTouches > 1) {
             initializeGestureRecognizersWithTwoTouch()
         }
@@ -390,6 +389,9 @@ class GameViewController: UIViewController {
         }
     }
     
+    
+    // MARK: - Game Processes
+    
     private func correct(_ quadrant: Int) {
         print("Correct")
         
@@ -454,6 +456,9 @@ class GameViewController: UIViewController {
         return false
     }
     
+    
+    // MARK: Sound Effects
+    
     func startNote(_ note: Int) {
         midiNote.sampler?.startNote(UInt8(note), withVelocity: 64, onChannel: 0)
     }
@@ -467,7 +472,6 @@ class GameViewController: UIViewController {
         runCode(in:length) {
             self.stopNote(note)
         }
-//        let _: Timer = Timer(timeInterval: length, target: self, selector: #selector(stopNote(_:)), userInfo: nil, repeats: true)
     }
     
     private func runCode(in timeInterval: TimeInterval, _ code:@escaping ()->(Void)) {

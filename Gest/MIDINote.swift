@@ -11,6 +11,7 @@ import AVFoundation
 
 class MIDINote: NSObject {
 
+    // MARK: Properties
     var engine: AVAudioEngine?
     var soundbank: URL?
     var sampler: AVAudioUnitSampler?
