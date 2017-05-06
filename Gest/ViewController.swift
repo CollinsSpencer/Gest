@@ -13,11 +13,12 @@ class ViewController: UIViewController {
     // MARK: Properties
     var numberOfTouches: Int = 1
     var option: Int = 0
+    @IBOutlet weak var AboutMeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print()
+        AboutMeButton.layer.cornerRadius = 0.5 * AboutMeButton.bounds.size.height
     }
 
     override func didReceiveMemoryWarning() {

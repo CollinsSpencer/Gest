@@ -126,9 +126,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klf-RK-e1D">
-                                <rect key="frame" x="159" y="677" width="96" height="39"/>
+                                <rect key="frame" x="143" y="677" width="129" height="39"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.84313725490000002" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="About Me"/>
+                                <color key="tintColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="   About Me   "/>
                                 <connections>
                                     <segue destination="uhY-kw-zpM" kind="presentation" identifier="AboutMe" id="nii-y4-c4c"/>
                                 </connections>
@@ -239,6 +241,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B7q-pj-3AG"/>
+                    <connections>
+                        <outlet property="AboutMeButton" destination="Klf-RK-e1D" id="Pcf-RX-lVj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -774,7 +779,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gr1-KT-mYI"/>
-        <segue reference="9NA-tb-j5l"/>
+        <segue reference="7tV-CQ-LLN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.3294117647" green="0.84313725490000002" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
